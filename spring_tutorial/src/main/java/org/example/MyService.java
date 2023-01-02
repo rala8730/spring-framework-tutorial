@@ -8,16 +8,16 @@ import org.springframework.stereotype.Service;
 //@Component
 @Service //using service instead of component
 public class MyService {
-@Autowired
+//@Autowired
     private MyRepository repository;
 
     //loosely coupled constructor
     // constructor dependency type
-   /*
+@Autowired //
     public MyService(MyRepository repository){
         this.repository=repository;
     }
-    */
+
     public void doBusinessLogic(){
 
         System.out.println("Doing business logic.");

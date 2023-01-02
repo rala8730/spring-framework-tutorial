@@ -1,6 +1,7 @@
 package org.example;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
@@ -12,7 +13,12 @@ public class App
 {
     public static void main( String[] args )
     {
-        ApplicationContext ctx= new ClassPathXmlApplicationContext("applicationContext.xml");
+        //Xml based
+        //ApplicationContext ctx= new ClassPathXmlApplicationContext("applicationContext.xml");
+
+        //non xml based
+        ApplicationContext ctx=new AnnotationConfigApplicationContext("org.example");
+
 
         // prototype scope
         //MyService bean1 = ctx.getBean(MyService.class);
