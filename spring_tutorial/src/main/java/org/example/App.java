@@ -17,8 +17,8 @@ public class App
         //ApplicationContext ctx= new ClassPathXmlApplicationContext("applicationContext.xml");
 
         //non xml based
-        ApplicationContext ctx=new AnnotationConfigApplicationContext("org.example");
-
+        //ApplicationContext ctx=new AnnotationConfigApplicationContext("org.example");
+        ApplicationContext ctx=new AnnotationConfigApplicationContext(AppConfig.class);
 
         // prototype scope
         //MyService bean1 = ctx.getBean(MyService.class);
