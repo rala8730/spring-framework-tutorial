@@ -6,14 +6,14 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 //@Component
-@Service //using service instead of component
+//@Service //using service instead of component //removing this to create java based bean in AppConfig
 public class MyService {
 //@Autowired
     private MyRepository repository;
 
     //loosely coupled constructor
     // constructor dependency type
-@Autowired //
+//@Autowired //removing this to create java based bean in AppConfig
     public MyService(MyRepository repository){
         this.repository=repository;
     }

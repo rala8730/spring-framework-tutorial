@@ -16,7 +16,7 @@ public class App
         //Xml based
         //ApplicationContext ctx= new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        //non xml based
+        //non xml based; by adding configuration class
         //ApplicationContext ctx=new AnnotationConfigApplicationContext("org.example");
         ApplicationContext ctx=new AnnotationConfigApplicationContext(AppConfig.class);
 
