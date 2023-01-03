@@ -1,9 +1,10 @@
 package org.example;
 
+import org.example.business.AnotherServiceImpl;
+import org.example.business.MyService;
+import org.example.business.MyServiceImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 /**
  * Hello world!
@@ -20,6 +21,14 @@ public class App
         //ApplicationContext ctx=new AnnotationConfigApplicationContext("org.example");
         ApplicationContext ctx=new AnnotationConfigApplicationContext(AppConfig.class);
 
+
+        //using interface
+        //MyService service=ctx.getBean(MyService.class);
+
+        //using AnotherserviceImpl
+        MyService service = ctx.getBean(AnotherServiceImpl.class);
+        MyService service1 = ctx.getBean(MyServiceImpl.class);
+
         // prototype scope
         //MyService bean1 = ctx.getBean(MyService.class);
         //MyService bean2 = ctx.getBean(MyService.class);
@@ -29,11 +38,12 @@ public class App
         //bean.doSomething();
 
         //setter dependency injection
-        MyService service = ctx.getBean(MyService.class);
-        service.doBusinessLogic();
+        //MyServiceImpl service = ctx.getBean(MyService.class);
+        //MyServiceImpl service1 = ctx.getBean(MyService.class);
+        //service.doBusinessLogic();
 
-        MyRepository repository=ctx.getBean(MyRepository.class);
-        repository.doQuery();
+        //MyRepository repository=ctx.getBean(MyRepository.class);
+        //repository.doQuery();
 
 
 

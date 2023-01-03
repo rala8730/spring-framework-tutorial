@@ -12,22 +12,22 @@
     -->
 
     <!--
-    <bean id="service" class="org.example.MyService" scope="prototype">
+    <bean id="service" class="org.example.business.MyService" scope="prototype">
 -->
     <!--constructor prototype -->
 <!--
-    <bean id="service" class="org.example.MyService" scope="singletone">
+    <bean id="service" class="org.example.business.MyService" scope="singletone">
         <constructor-arg ref="repository"/>
     </bean>
 -->
 
     <!-- setter prototype-->
     <!--
-    <bean id="service" class="org.example.MyService" >
+    <bean id="service" class="org.example.business.MyService" >
         <property name="repository" ref="repository"/>
     </bean>
 
-    <bean id="repository" class="org.example.MyRepository" scope="prototype"/>
+    <bean id="repository" class="org.example.data.MyRepository" scope="prototype"/>
     -->
 <!--
 </beans>
