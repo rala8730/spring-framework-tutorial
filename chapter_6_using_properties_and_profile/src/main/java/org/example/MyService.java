@@ -14,7 +14,7 @@ public class MyService {
         this.repository=repository;
     }
     public void doBusinessLogic(){
-        System.out.println("Do Business logic for"+name);
+        System.out.println("Do Business logic for "+name);
         repository.doQuery();
     }
 
