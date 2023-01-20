@@ -7,6 +7,7 @@ public class App
 {
     public static void main( String[] args )
     {
+        System.setProperty("spring.profiles.active","local");
         ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
         MyService service = ctx.getBean(MyService.class);
         service.doBusinessLogic();
